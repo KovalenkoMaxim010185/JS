@@ -8,34 +8,22 @@
 // 			При отмене – «Отменено».
 			
 // 			Подсказка: передача пустого ввода в приглашение prompt возвращает пустую строку ''. Нажатие клавиши Esc во время запроса возвращает null.
-var login = 'Админ';
-var password = 'Я главный';
-var userLogin, userPassword;
+var login = "Admin";
+var enteredLogin = prompt('enter login');
 
-do {
-    userLogin = prompt('Введите логин');
-    if (!userLogin) {
-        alert('Отмена');
-        break;
-    }
-    if (login == userLogin) {
-        userPassword = prompt('Введите пароль');
-    } 
-    else if (login == !userLogin) {
-        alert('Я Вас не знаю');
-        break;
-    }
-    else if (!userPassword){
-        alert('Отменено');
-        break;
-    }
-    if (password == userPassword) {
-        alert('Здравствуйте');
-        break;
-    }
-    else if (login == !userLogin)
-        alert('Неверный пароь');
-        break;
+if (enteredLogin === login) {    
+    var password = 'Я главный';
+    var enteredPassword = prompt('please enter password');
 
-} 
-while (true);
+    if (enteredPassword === password) {
+        console.log('Hello');
+    } else if (enteredPassword === ''){
+        console.log('please enter correct password')
+    } else if (enteredPassword === null) {
+        console.log('cancelled')
+    } else if (enteredPassword !== password) {
+        console.log('incorrect password');
+    }
+} else {
+    console.log('unknown name member');
+}
