@@ -13,9 +13,9 @@ var userCar = prompt("Пожалуйста, введите марку авто")
   
 if (cars.includes(userCar)) {
     var index = cars.indexOf(userCar);
-    cars.splice(cars[index], 0, userCar);
+    cars.splice(cars, 0, userCar);
 } else {
     cars.push(userCar)
 }
 
-console.log(cars);
+console.log(`Марки авто${cars}`);
