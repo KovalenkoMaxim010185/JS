@@ -1,7 +1,7 @@
-let cities = ['Dnipro', 'Kyiv', 'Lviv'];
-let population = [100000, 	1500000, 800000];
-var drop = new Object;
+let cities = ["Днепр", "Киев", "Харьков"];
+let population = [1000000, 	3000000, 500000];
+var obj = {};
 for(var i = 0; i < cities.length; i++) {
-	drop = [cities[i]] + [population[i]];
+	obj[cities[i]] = population[i];
 }
-alert(drop);
+console.log(obj);
